@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Entradas de {{ autor.nombre }}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Entradas de {{ autor.nombre }}</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Contenido</th>
+                <th>Fecha de publicacion</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entrada in entradas %}
+                <tr>
+                    <td>{{ entrada.titulo }}</td>
+                    <td>{{ entrada.contenido }}</td>
+                    <td>{{ entrada.fecha_publicacion }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
